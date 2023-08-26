@@ -18,9 +18,12 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'fullname',
         'email',
+        'phone',
+        'photo',
         'password',
+        'role_id',
     ];
 
     /**
@@ -42,4 +45,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function role(){
+        return $this ->belongsTo('App\Models\Role');
+    }
+
+    public function movies(){
+        return $this -> hasMany ('App\Models\Movie');
+    }
 }
