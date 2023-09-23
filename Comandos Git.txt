@@ -1,0 +1,9 @@
+Inicializar Repositorio
+- git init 
+
+Guardar Cambios en Stage
+- git add .
+
+Guardar versión (Commit)
+- git commit -m "First Commit"
+

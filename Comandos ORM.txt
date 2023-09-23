@@ -1,0 +1,32 @@
+Comandos ORM
+
+CREATE
++++++++++++++++++++++++++++
+$user = new User;
+$user->fullname = 'Homero Simpson';
+$user->email = 'homero@gmail.com';
+$user->phone = '1234567890';
+$user->photo = 'images/no-photo.png';
+$user->password = '12345678';
+$user->role_id = 2;
+$user->save();
+
+
+READ
++++++++++++++++++++++++++++
+$users = User::all(); // Obtiene todos los registros
+$user = User::find(1); // Obtiene un registro en especifico
+$users = User::find([1,2,3]); // Obtiene varios registros indicando su indicando
+$count = User::count(); // Cantidad de registros
+
+UPDATE
++++++++++++++++++++++++++++
+$user = User::find(id);
+$user->email = 'homero@gmail.com';
+$user->save();
+
+
+DELETE
++++++++++++++++++++++++++++
+$user = User::find(id);
+$user->delete();

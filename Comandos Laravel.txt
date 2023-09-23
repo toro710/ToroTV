@@ -1,0 +1,82 @@
+Instalación de Laravel
+- composer global require laravel/installer
+
+Creación de un proyecto
+- laravel new NovaTV
+
+Comandos Artisan
+
+Abrir interfaz de consola
+- php artisan tinker
+
+Crear una migración
+- php artisan make:migration create_roles_table
+
+Ejecutar migraciones
+- php artisan migrate
+  php artisan migrate:fresh           Drop all tables and re-run all migrations
+  php artisan migrate:install         Create the migration repository
+  php artisan migrate:refresh         Reset and re-run all migrations
+  php artisan migrate:reset           Rollback all database migrations
+  php artisan migrate:rollback        Rollback the last database migration
+  php artisan migrate:status          Show the status of each migration
+
+Crear un Modelo
+
+php artisan make:model NombreModelo
+
+// Seeders
+
+Crear un Seeder
+
+php artisan make:seeder NombreModeloSeeder
+
+Ejecutar Seeders
+
+php artisan db:seed
+php artisan migrate:fresh --seed
+
+
+Creación Factories
+php artisan make:factory UserFactory --model=User
+
+Creación de Key
+php artisan key:generate
+
+Levantar servidor local
+php artisan serve
+
+Eliminar caché
+php artisan optimize
+
+Crear Controlador
+php artisan make:controller TestController
+php artisan make:controller UserController --resource
+
+Instalación Laravel Mixin
+
+composer require laravel/ui
+npm install & npm run dev
+php artisan ui bootstrap --auth
+php artisan ui bootstrap
+npm run dev
+npm run watch
+
+Rutas
+
+php artisan route:list
+php artisan r:l
+php artisan route:clear
+php artisan route:cache
+
+
+Reestablecer proyecto
+
+git clone git@github.com:Andresr31/NovaTV2.git
+composer install
+npm install
+cp .env.example .env -> Luego configurar variables de entorno
+php artisan key:generate
+php artisan migrate
+npm run dev
+
