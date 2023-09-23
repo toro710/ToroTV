@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hello', function () {
-    return ('hola juan felipe');
-});
-
 Route::get('/test/{name}',[App\Http\Controllers\TestController::class,'test']);
 Route::get('/user/{id}',[App\Http\Controllers\TestController::class,'findUser']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
