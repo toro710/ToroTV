@@ -16,16 +16,17 @@ return new class extends Migration
             $table->string('fullname');
             $table->string('email')->unique();
             $table->string('phone');
-            $table->string('photo')->default('images/no-photo.png');;
+            $table->string('photo')->default('images/no-photo.png');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
 
-            //foreing keys
-
+            // Foreign Keys
             $table->unsignedBigInteger('role_id');
             $table->foreign('role_id')->references('id')->on('roles')
                                                         ->onUpdate('cascade')
                                                         ->onDelete('cascade');
+
+
             $table->rememberToken();
             $table->timestamps();
         });

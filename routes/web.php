@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\MovieController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +23,13 @@ Route::get('/', function () {
 
 Route::get('/test/{name}',[App\Http\Controllers\TestController::class,'test']);
 Route::get('/user/{id}',[App\Http\Controllers\TestController::class,'findUser']);
-Auth::routes();
 
+
+Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resources([
+    'users' => UserController::class,
+    'categories' => CategoryController::class,
+    'movies' => MovieController::class
+]);

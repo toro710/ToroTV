@@ -8,7 +8,6 @@ use App\Models\User;
 class TestController extends Controller
 {
     public function test(string $name){
-        ;
         // dd("Hola $name");
         $number = 5;
         $day = 'Saturday';

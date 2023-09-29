@@ -46,11 +46,13 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    ////////////////////////////////////
+    // Relaciones
     public function role(){
-        return $this ->belongsTo('App\Models\Role');
+        return $this->belongsTo('App\Models\Role');
     }
 
     public function movies(){
-        return $this -> hasMany ('App\Models\Movie');
+        return $this->hasMany('App\Models\Movie');
     }
 }

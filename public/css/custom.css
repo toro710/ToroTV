@@ -1,18 +1,18 @@
-.bg-novatv {
+.bg-ToroTv {
     background-color: #2471A3;
 }
 
-.btn-novatv {
+.btn-ToroTv {
     background-color: #2471A3;
     color: white;
 }
 
-.bg-novatv:hover {
+.bg-ToroTv:hover {
     background-color: #2471A3;
     color: rgba(255, 255, 255, 0.415);
 }
 
-.card-header-novatv{
+.card-header-ToroTv{
     background-color: #2471A3;
     color: white;
     padding: 1rem 0rem 0.5rem 0rem;

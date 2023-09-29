@@ -1,11 +1,18 @@
 @extends('layouts.app')
+@section('title','ToroTv - Registro')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Registro') }}</div>
+                <img src="{{ asset('images/elements/register.svg') }}" alt="img" width="250px" class="my-4 img-top-card">
+                <div class="card-header-ToroTv text-uppercase text-center">
+                    <h5>
+                        <i class="fa fa-user-edit"></i>
+                        Registro
+                    </h5>
+                </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -26,7 +33,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Correo electronico') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Correo electrónico') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -68,19 +75,20 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirmar contraseña') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirmar Contraseña') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
 
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Registrarse') }}
-                                </button>
-                            </div>
+                        <div class="row mb-0 px-4">
+                            
+                            <button type="submit" class="btn btn-primary btn-block text-uppercase" style="background-color: #2471A3">
+                                Registro
+                                <i class="fa fa-save"></i>
+                            </button>
+                            
                         </div>
                     </form>
                 </div>

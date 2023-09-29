@@ -28,12 +28,12 @@
             <h3>Lista de usuarios:</h3>
             <table class="table">
                 <thead>
-                <tr>
+                  <tr>
                     <th scope="col">Id</th>
                     <th scope="col">Nombre Completo</th>
                     <th scope="col">Email</th>
                     <th scope="col">Teléfono</th>
-                </tr>
+                  </tr>
                 </thead>
                 <tbody>
                     @foreach ($users as $user)
@@ -45,7 +45,7 @@
                         </tr>
                     @endforeach
                 </tbody>
-            </table>
+              </table>
         </div>
     </div>
 @endsection
