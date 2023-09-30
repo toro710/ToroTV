@@ -14,9 +14,9 @@ class TestController extends Controller
 
         $users = User::all();
         return view('test')->with('name',$name)
-                            ->with('number',$number)
-                            ->with('day',$day)
-                            ->with('users',$users);
+                          ->with('number',$number)
+                          ->with('day',$day)
+                          ->with('users',$users);
     }
 
     public function findUser(int $id){

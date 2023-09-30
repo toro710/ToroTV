@@ -1,12 +1,12 @@
 @extends('layouts.app')
-@section('title','ToroTv - Editar categoria')
+@section('title','ToroTv - Crear categorias')
 
 @section('content')
 
     <div class="row py-4 px-4">
         <div class="col-md-10 offset-md-1">
             <h1 style="color: #2471A3;">
-                <i class="fa fa-plus"></i> Editar categoria
+                <i class="fa fa-plus"></i> Agregar Categoría
             </h1>
             <hr>
             <nav aria-label="breadcrumb">
@@ -25,7 +25,7 @@
                     </li>
                     <li class="breadcrumb-item active" aria-current="page">
                         <i class="fa fa-plus"></i>
-                            Editar Categoria
+                            Adicionar Categoria
                     </li>
                 </ol>
             </nav>

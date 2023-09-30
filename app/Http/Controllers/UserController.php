@@ -36,7 +36,7 @@ class UserController extends Controller
     {
         if(Auth::user()->role->name != 'Admin'){
             return redirect('home')->with('error','No puede acceder a este recurso');
-        }
+       }
         $roles = Role::all();
         return view('elements.users.create')->with('roles',$roles);
 
@@ -50,7 +50,7 @@ class UserController extends Controller
     {
         if(Auth::user()->role->name != 'Admin'){
             return redirect('home')->with('error','No puede acceder a este recurso');
-        }
+       }
         $user = new User;
 
         $user->fullname = $request->fullname;
@@ -80,7 +80,7 @@ class UserController extends Controller
     {
         if(Auth::user()->role->name != 'Admin'){
             return redirect('home')->with('error','No puede acceder a este recurso');
-        }
+       }
         $user = User::find($id);
         return view('elements.users.show')->with('user',$user);
     }
@@ -93,7 +93,7 @@ class UserController extends Controller
     {
         if(Auth::user()->role->name != 'Admin'){
             return redirect('home')->with('error','No puede acceder a este recurso');
-        }
+       }
         $user = User::find($id);
         $roles = Role::all();
         return view('elements.users.edit')->with('user',$user)->with('roles',$roles);
@@ -107,7 +107,7 @@ class UserController extends Controller
     {
         if(Auth::user()->role->name != 'Admin'){
             return redirect('home')->with('error','No puede acceder a este recurso');
-        }
+       }
         $user = User::find($id);
 
         $user->fullname = $request->fullname;
@@ -135,6 +135,10 @@ class UserController extends Controller
     {
         if(Auth::user()->role->name != 'Admin'){
             return redirect('home')->with('error','No puede acceder a este recurso');
+       }
+        $file = public_path().'/'.$user->photo;
+        if (!str_contains($user->photo, 'https') && getimagesize($file) && $user->photo != 'images/no-profile.png') {
+            unlink($file);
         }
 
         if($user->delete()){

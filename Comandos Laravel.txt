@@ -2,7 +2,7 @@ Instalación de Laravel
 - composer global require laravel/installer
 
 Creación de un proyecto
-- laravel new nombredelproyecto
+- laravel new ToroTv
 
 Comandos Artisan
 
@@ -79,4 +79,8 @@ cp .env.example .env -> Luego configurar variables de entorno
 php artisan key:generate
 php artisan migrate
 npm run dev
+
+Request
+
+php artisan make:request NombreRequest
 

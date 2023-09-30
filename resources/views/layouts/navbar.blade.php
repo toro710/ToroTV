@@ -52,14 +52,14 @@
                                 </a>
                                 <a href="{{ url('movies') }}" class="dropdown-item">
                                     <i class="fa fa-film"></i>
-                                    Módulo Favoritos
+                                    Módulo Peliculas
                                 </a>
                                 
                             @endif
                             
                             <a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                            document.getElementById('logout-form').submit();">
+                               onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
                                 <i class="fa-solid fa-right-from-bracket"></i>
                                 Cerrar sesión
                             </a>

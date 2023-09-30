@@ -94,7 +94,7 @@
                         <strong>{{ $message }}</strong>
                     </span>
                 @enderror
-            
+                   
             </div>
             <div class="mb-3">
                 <label for="video_link" class="">Link del video </label>
