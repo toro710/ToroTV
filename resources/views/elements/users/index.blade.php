@@ -40,7 +40,7 @@
                                             <button type="button" class="btn btn-sm btn-danger btn-delete"><i class="fa fa-trash"></i></button>
                                         </form>
                                     </td>
-                                   
+                                    
                                 </tr>
                             @endforeach
                         </tbody>

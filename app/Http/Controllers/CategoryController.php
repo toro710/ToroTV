@@ -11,7 +11,7 @@ class CategoryController extends Controller
 {
     public function __construct()
     {
-       $this->middleware('auth'); 
+        $this->middleware('auth'); 
     }
     /**
      * Obtener todos los elementos y retornar la vista para su visualización
@@ -19,9 +19,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-       if(Auth::user()->role->name != 'Admin'){
+        if(Auth::user()->role->name != 'Admin'){
             return redirect('home')->with('error','No puede acceder a este recurso');
-       }
+        }
         // $categories = Category::all();
         $categories = Category::paginate(10);
         return view('elements.categories.index')->with('categories',$categories);
@@ -35,7 +35,7 @@ class CategoryController extends Controller
     {
         if(Auth::user()->role->name != 'Admin'){
             return redirect('home')->with('error','No puede acceder a este recurso');
-       }
+        }
 
         return view('elements.categories.create');
 
@@ -49,7 +49,7 @@ class CategoryController extends Controller
     {
         if(Auth::user()->role->name != 'Admin'){
             return redirect('home')->with('error','No puede acceder a este recurso');
-       }
+        }
         $category = new Category;
 
         $category->name = $request->name;
@@ -70,7 +70,7 @@ class CategoryController extends Controller
     {
         if(Auth::user()->role->name != 'Admin'){
             return redirect('home')->with('error','No puede acceder a este recurso');
-       }
+        }
         $category = Category::find($id);
         return view('elements.categories.show')->with('category',$category);
     }
@@ -83,7 +83,7 @@ class CategoryController extends Controller
     {
         if(Auth::user()->role->name != 'Admin'){
             return redirect('home')->with('error','No puede acceder a este recurso');
-       }
+        }
         $category = Category::find($id);
         
         return view('elements.categories.edit')->with('category',$category);
@@ -97,7 +97,7 @@ class CategoryController extends Controller
     {
         if(Auth::user()->role->name != 'Admin'){
             return redirect('home')->with('error','No puede acceder a este recurso');
-       }
+        }
         $category = Category::find($id);
 
         $category->name = $request->name;
@@ -116,7 +116,7 @@ class CategoryController extends Controller
     {
         if(Auth::user()->role->name != 'Admin'){
             return redirect('home')->with('error','No puede acceder a este recurso');
-       }
+        }
 
         if($category->delete()){
             return redirect('categories')->with('message','La categoría: '.$category->name.' ha sido eliminado existosamente!!');

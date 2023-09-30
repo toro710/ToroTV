@@ -52,7 +52,7 @@
                                 </a>
                                 <a href="{{ url('movies') }}" class="dropdown-item">
                                     <i class="fa fa-film"></i>
-                                    Módulo Peliculas
+                                    Módulo Favoritos
                                 </a>
                                 
                             @endif
